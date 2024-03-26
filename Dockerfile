@@ -32,7 +32,7 @@ ENV \
   APP_ENV=prod \
   PGPT_PROFILES=docker \
   PGPT_MODE=mock \
-  PGPT_EMBEDDING_MODE=sagemaker \
+  PGPT_EMBEDDING_MODE=mock \
   PGPT_HF_REPO_ID=TheBloke/Mistral-7B-Instruct-v0.1-GGUF \
   PGPT_HF_MODEL_FILE=mistral-7b-instruct-v0.1.Q4_K_M.gguf \
   PGPT_EMBEDDING_HF_MODEL_NAME=BAAI/bge-small-en-v1.5 \
