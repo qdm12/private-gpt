@@ -14,6 +14,11 @@ services:
       PORT: 8080
       PGPT_PROFILES: docker
       PGPT_MODE: ollama
+    ## Nvidia  GPU support ##
+    # runtime: nvidia
+    # ipc: host
+    # devices:
+    #   - nvidia.com/gpu=0
   ollama:
     image: ollama/ollama:latest
     volumes:
