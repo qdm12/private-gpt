@@ -41,3 +41,5 @@ services:
     image: ollama/ollama:latest
     volumes:
       - ./models:/root/.ollama
+    expose:
+      - 11434
