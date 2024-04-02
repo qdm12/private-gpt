@@ -11,8 +11,6 @@ services:
     ports:
       - 8001:8080
     environment:
-      PORT: 8080
-      PGPT_PROFILES: docker
       PGPT_MODE: ollama
     ## Nvidia  GPU support ##
     # runtime: nvidia
