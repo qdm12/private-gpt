@@ -3,7 +3,8 @@ services:
     image: privategpt
     build:
       context: .
-      # context: https://github.com/zylon-ai/private-gpt.git#main
+      # context: https://github.com/qdm12/private-gpt.git#docker-tip
+      # TODO: change to https://github.com/zylon-api/private-gpt.git#main
       args:
         - POETRY_EXTRAS=vector-stores-qdrant llms-ollama embeddings-ollama embeddings-huggingface
     volumes:
