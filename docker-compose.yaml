@@ -8,6 +8,8 @@ services:
         - POETRY_EXTRAS=vector-stores-qdrant llms-ollama embeddings-ollama embeddings-huggingface
     volumes:
       - ./local_data/:/home/worker/app/local_data
+      - ./cache/tiktoken:/home/worker/app/tiktoken_cache
+      - ./cache/models:/home/worker/app/models/cache
     ports:
       - 8001:8080
     environment:
