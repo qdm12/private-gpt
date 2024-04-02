@@ -1,5 +1,6 @@
 services:
   private-gpt:
+    image: privategpt
     build:
       context: .
       # context: https://github.com/zylon-ai/private-gpt.git#main
