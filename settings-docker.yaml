@@ -6,11 +6,16 @@ llm:
   mode: ${PGPT_MODE:mock}
 
 embedding:
-  mode: ${PGPT_MODE:sagemaker}
+  mode: ${PGPT_EMBEDDING_MODE:mock}
 
 llamacpp:
   llm_hf_repo_id: ${PGPT_HF_REPO_ID:TheBloke/Mistral-7B-Instruct-v0.1-GGUF}
   llm_hf_model_file: ${PGPT_HF_MODEL_FILE:mistral-7b-instruct-v0.1.Q4_K_M.gguf}
+
+openai:
+  api_base: ${PGPT_OPENAI_API_BASE:https://api.openai.com/v1}
+  api_key: ${PGPT_OPENAI_API_KEY:EMPTY}
+  model: ${PGPT_OPENAI_MODEL:}
 
 huggingface:
   embedding_hf_model_name: ${PGPT_EMBEDDING_HF_MODEL_NAME:BAAI/bge-small-en-v1.5}
@@ -34,3 +39,11 @@ ollama:
 ui:
   enabled: true
   path: /
+
+
+rag:
+  similarity_top_k: ${PGPT_RAG_SIMILARITY_TOP_K:2}
+  rerank:
+    enabled: ${PGPT_RAG_RERANK_ENABLED:false}
+    model: ${PGPT_RAG_RERANK_MODEL:cross-encoder/ms-marco-MiniLM-L-2-v2}
+    top_n: ${PGPT_RAG_RERANK_TOP_N:2}
